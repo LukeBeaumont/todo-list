@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/LukeBeaumont/todo-list#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
-    "webpack-cli": "^5.1.4"
+    "style-loader": "^3.3.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
