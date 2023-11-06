@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: lightgoldenrodyellow;
+  height: 15vh;
+}
+
+.left-sidebar {
+  background-color: paleturquoise;
+  height: 85vh;
+  width: 20vw;
+}
+
+.right-content {
+  background-color: peachpuff;
+  height: 85vh;
+  width: 80vw;
+}
+
+.container {
+  display: flex;
+}
