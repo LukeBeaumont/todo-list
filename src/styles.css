@@ -5,6 +5,13 @@ body {
 .header {
   background-color: lightgoldenrodyellow;
   height: 15vh;
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+  padding: 30px;
+  padding-top: 40px;
 }
 
 .left-sidebar {
