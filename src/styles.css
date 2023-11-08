@@ -36,7 +36,7 @@ button {
   margin: 10px;
 }
 
-.form {
+.add-todo {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -47,4 +47,11 @@ button {
   background-color: rgb(255, 255, 255, 0.9);
   justify-content: center;
   align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 20px;
 }
