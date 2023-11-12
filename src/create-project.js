@@ -3,9 +3,9 @@ let allProjects = [];
 export function addProjectToList() {
   const projectTitle = document.querySelector(".project-title");
   let projectInput = document.getElementById("project-input").value;
-  let projectDescription = document.getElementById("project-description").value;
+
   if (projectInput) {
-    const newProject = CreateProject(projectInput, projectDescription);
+    const newProject = CreateProject(projectInput);
     console.log(newProject);
     allProjects.push(newProject);
     console.log(allProjects);
@@ -16,13 +16,12 @@ export function addProjectToList() {
   }
 }
 
-function CreateProject(title, description) {
-  return { title: title, description: description, toDos: [] };
+function CreateProject(title) {
+  return { title: title, toDos: [] };
 }
 
 export function clearSubmit() {
   const addProject = document.querySelector(".add-project");
   addProject.style.display = "none";
   document.querySelector("#project-input").value = "";
-  document.querySelector("#project-description").value = "";
 }
