@@ -1,5 +1,5 @@
 import "./styles.css";
-import addProjectToList from "./create-project";
+import { addProjectToList, clearSubmit } from "./create-project";
 import CreateTodo from "./create-todo";
 
 (function showAddProject() {
@@ -26,5 +26,6 @@ import CreateTodo from "./create-todo";
   submitProjectBtn.addEventListener("click", function (e) {
     e.preventDefault();
     addProjectToList();
+    clearSubmit();
   });
 })();
