@@ -10,6 +10,7 @@ export function addProjectToList() {
     allProjects.push(newProject);
     console.log(allProjects);
     clearSubmit();
+    projectTitle.classList.remove("show");
   } else {
     projectTitle.classList.add("show");
   }
