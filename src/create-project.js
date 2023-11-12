@@ -1,8 +1,12 @@
+let allProjects = [];
+
 export function addProjectToList() {
   let projectTitle = document.getElementById("project-title").value;
   let projectDescription = document.getElementById("project-description").value;
-  const projectOne = CreateProject(projectTitle, projectDescription);
-  console.log(projectOne);
+  const newProject = CreateProject(projectTitle, projectDescription);
+  console.log(newProject);
+  allProjects.push(newProject);
+  console.log(allProjects);
 }
 function CreateProject(title, description) {
   return { title: title, description: description, toDos: [] };
