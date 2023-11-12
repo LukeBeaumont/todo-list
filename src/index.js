@@ -1,5 +1,5 @@
 import "./styles.css";
-import CreateProject from "./create-project";
+import addProjectToList from "./create-project";
 import CreateTodo from "./create-todo";
 
 (function showAddProject() {
@@ -17,5 +17,14 @@ import CreateTodo from "./create-todo";
 
   addTodoBtn.addEventListener("click", () => {
     addTodo.style.display = "flex";
+  });
+})();
+
+(function createProject() {
+  const submitProjectBtn = document.getElementById("submit-project");
+
+  submitProjectBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    addProjectToList();
   });
 })();
