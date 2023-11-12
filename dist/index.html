@@ -6,6 +6,50 @@
     <title>ToDoList</title>
   <script defer src="bundle.js"></script></head>
   <body>
-    <div id="content"></div>
+    <div class="header">
+      <h1 class="title">To Do List!</h1>
+    </div>
+    <div class="container">
+      <div class="left-sidebar">
+        <button class="add-project-btn">+ Add project</button>
+      </div>
+      <div class="right-content">
+        <button>+ Add to do</button>
+      </div>
+      <div class="add-todo">
+        <form class="form">
+          <p>Add to do...</p>
+          <label for="title">Title:</label>
+          <input type="text" id="title" />
+
+          <label for="description">Description:</label>
+          <input type="text" id="description" />
+
+          <label for="due">Due by:</label>
+          <input type="text" id="due" />
+          <p>Priority:</p>
+          <div class="radio">
+            <label for="Low">Low</label>
+            <input type="radio" id="low" value="Low" name="Priority" />
+            <label for="Medium">Medium</label>
+            <input type="radio" id="medium" value="Medium" name="Priority" />
+            <label for="High">High</label>
+            <input type="radio" id="High" value="High" name="Priority" />
+          </div>
+          <input type="submit" value="Create!" />
+        </form>
+      </div>
+      <div class="add-project">
+        <form class="form">
+          <p>Add new project...</p>
+          <label for="title">Title:</label>
+          <input type="text" id="title" />
+
+          <label for="description">Description:</label>
+          <input type="text" id="description" />
+          <input type="submit" value="Create!" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
