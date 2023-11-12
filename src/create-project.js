@@ -5,7 +5,7 @@ export function addProjectToList() {
   console.log(projectOne);
 }
 function CreateProject(title, description) {
-  return { title: title, description: description };
+  return { title: title, description: description, toDos: [] };
 }
 
 export function clearSubmit() {
