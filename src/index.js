@@ -23,7 +23,7 @@ import CreateTodo from "./create-todo";
 (function createProject() {
   const submitProjectBtn = document.getElementById("submit-project");
 
-  submitProjectBtn.addEventListener("click", (e) => {
+  submitProjectBtn.addEventListener("click", function (e) {
     e.preventDefault();
     addProjectToList();
   });
