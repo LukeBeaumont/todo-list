@@ -26,6 +26,5 @@ import CreateTodo from "./create-todo";
   submitProjectBtn.addEventListener("click", function (e) {
     e.preventDefault();
     addProjectToList();
-    clearSubmit();
   });
 })();
