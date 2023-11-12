@@ -23,8 +23,16 @@ import CreateTodo from "./create-todo";
 (function createProject() {
   const submitProjectBtn = document.getElementById("submit-project");
 
-  submitProjectBtn.addEventListener("click", function (e) {
+  submitProjectBtn.addEventListener("click", (e) => {
     e.preventDefault();
     addProjectToList();
+  });
+})();
+
+(function addListener() {
+  const addTodoBtn = document.getElementById("submit-todo");
+  addTodoBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(CreateTodo("dog"));
   });
 })();
