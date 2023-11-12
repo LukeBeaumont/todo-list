@@ -5,7 +5,7 @@ export function addProjectToList() {
   let projectInput = document.getElementById("project-input").value;
   let projectDescription = document.getElementById("project-description").value;
   if (projectInput) {
-    const newProject = CreateProject(projectTitle, projectDescription);
+    const newProject = CreateProject(projectInput, projectDescription);
     console.log(newProject);
     allProjects.push(newProject);
     console.log(allProjects);
