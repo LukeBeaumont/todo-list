@@ -1,12 +1,16 @@
 export function newProject() {
   let projectInput = document.getElementById("project-input").value;
-  const project = CreateProject(projectInput);
-  console.log(project);
-  return project;
+  if (projectInput) {
+    const project = CreateProject(projectInput);
+    return project;
+  } else return;
 }
 
 function CreateProject(title) {
-  return { title: title, toDos: [] };
+  return {
+    title: title,
+    toDos: [],
+  };
 }
 
 export function clearSubmit() {
