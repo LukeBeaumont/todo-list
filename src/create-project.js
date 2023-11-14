@@ -1,9 +1,12 @@
 export function newProject() {
   let projectInput = document.getElementById("project-input").value;
+  const projectCss = document.querySelector(".project-title");
+  // check input is valid
   if (projectInput) {
     const project = CreateProject(projectInput);
+    projectCss.classList.remove("show");
     return project;
-  } else return;
+  } else projectCss.classList.add("show");
 }
 
 function CreateProject(title) {
