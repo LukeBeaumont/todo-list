@@ -1,7 +1,8 @@
 import "./styles.css";
-import { addProjectToList, clearSubmit } from "./create-project";
+import { newProject, clearSubmit } from "./create-project";
 import CreateTodo from "./create-todo";
 import { createLibrarian } from "./librarian";
+
 const librarian = createLibrarian();
 
 (function showAddProject() {
@@ -27,7 +28,8 @@ const librarian = createLibrarian();
 
   submitProjectBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    addProjectToList();
+    librarian.mainArr.push(newProject());
+    console.log(librarian.mainArr);
   });
 })();
 
@@ -35,6 +37,5 @@ const librarian = createLibrarian();
   const addTodoBtn = document.getElementById("submit-todo");
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(CreateTodo("dog"));
   });
 })();

@@ -1,11 +1,8 @@
-export function addProjectToList() {
-  const projectTitle = document.querySelector(".project-title");
+export function newProject() {
   let projectInput = document.getElementById("project-input").value;
-
-  const newProject = CreateProject(projectInput);
-  console.log(newProject);
-  librarian.mainArr.push(newProject);
-  console.log(librarian.mainArr);
+  const project = CreateProject(projectInput);
+  console.log(project);
+  return project;
 }
 
 function CreateProject(title) {
