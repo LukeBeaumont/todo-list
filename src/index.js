@@ -1,6 +1,8 @@
 import "./styles.css";
 import { addProjectToList, clearSubmit } from "./create-project";
 import CreateTodo from "./create-todo";
+import { createLibrarian } from "./librarian";
+const librarian = createLibrarian();
 
 (function showAddProject() {
   const addProjectBtn = document.querySelector(".add-project-btn");

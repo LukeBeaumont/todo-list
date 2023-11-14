@@ -1,19 +1,11 @@
-let allProjects = [];
-
 export function addProjectToList() {
   const projectTitle = document.querySelector(".project-title");
   let projectInput = document.getElementById("project-input").value;
 
-  if (projectInput) {
-    const newProject = CreateProject(projectInput);
-    console.log(newProject);
-    allProjects.push(newProject);
-    console.log(allProjects);
-    clearSubmit();
-    projectTitle.classList.remove("show");
-  } else {
-    projectTitle.classList.add("show");
-  }
+  const newProject = CreateProject(projectInput);
+  console.log(newProject);
+  librarian.mainArr.push(newProject);
+  console.log(librarian.mainArr);
 }
 
 function CreateProject(title) {
