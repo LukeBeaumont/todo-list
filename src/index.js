@@ -28,7 +28,7 @@ const librarian = createLibrarian();
 
   submitProjectBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    librarian.mainArr.push(newProject());
+    librarian.pushProject(newProject());
     console.log(librarian.mainArr);
   });
 })();

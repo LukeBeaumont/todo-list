@@ -2,7 +2,7 @@ export function newProject() {
   let projectInput = document.getElementById("project-input").value;
   const projectCss = document.querySelector(".project-title");
   // check input is valid
-  if (projectInput) {
+  if (projectInput !== "") {
     const project = CreateProject(projectInput);
     return project;
   } else projectCss.classList.toggle("show");
