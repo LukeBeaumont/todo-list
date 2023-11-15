@@ -1,7 +1,7 @@
 import "./styles.css";
 import { newProject, clearSubmit } from "./create-project";
 import CreateTodo from "./create-todo";
-import { createLibrarian, displayMainArr } from "./librarian";
+import { createLibrarian } from "./librarian";
 
 const librarian = createLibrarian();
 
@@ -29,7 +29,7 @@ const librarian = createLibrarian();
   submitProjectBtn.addEventListener("click", (e) => {
     e.preventDefault();
     librarian.mainArr.push(newProject());
-    displayMainArr(librarian.mainArr);
+    console.log(librarian.mainArr);
   });
 })();
 
