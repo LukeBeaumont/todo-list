@@ -4,9 +4,8 @@ export function newProject() {
   // check input is valid
   if (projectInput) {
     const project = CreateProject(projectInput);
-    projectCss.classList.remove("show");
     return project;
-  } else projectCss.classList.add("show");
+  } else projectCss.classList.toggle("show");
 }
 
 function CreateProject(title) {
