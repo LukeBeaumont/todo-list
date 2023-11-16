@@ -83,3 +83,6 @@ button {
   top: -64px;
   left: 140px;
 }
+.close-btn:hover {
+  cursor: pointer;
+}

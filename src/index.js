@@ -7,10 +7,15 @@ const librarian = createLibrarian();
 
 (function showAddProject() {
   const addProjectBtn = document.querySelector(".add-project-btn");
-  const addProject = document.querySelector(".add-project");
+  const addProjectForm = document.querySelector(".add-project");
+  const closeBtn = document.querySelector(".close-btn");
 
   addProjectBtn.addEventListener("click", () => {
-    addProject.style.display = "flex";
+    addProjectForm.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    addProjectForm.style.display = "none";
   });
 })();
 
@@ -33,9 +38,9 @@ const librarian = createLibrarian();
   });
 })();
 
-(function addListener() {
-  const addTodoBtn = document.getElementById("submit-todo");
-  addTodoBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-  });
-})();
+// (function addListener() {
+//   const addTodoBtn = document.getElementById("submit-todo");
+//   addTodoBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//   });
+// })();

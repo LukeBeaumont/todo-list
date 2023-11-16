@@ -21,3 +21,7 @@ export function clearSubmit() {
   addProject.style.display = "none";
   document.querySelector("#project-input").value = "";
 }
+
+export function handleCloseBtn() {
+  const closeBtn = document.querySelector(".close-btn");
+}
