@@ -1,9 +1,9 @@
 import "./styles.css";
 import { newProject, clearSubmit } from "./create-project";
-import { CreateTodo, handleDropdown } from "./create-todo";
+import { CreateTodo, handleDropdown, pushTodoToProject } from "./create-todo";
 import { createLibrarian } from "./librarian";
 
-const librarian = createLibrarian();
+export const librarian = createLibrarian();
 
 (function showAddProject() {
   const addProjectBtn = document.querySelector(".add-project-btn");
@@ -39,9 +39,10 @@ const librarian = createLibrarian();
   });
 })();
 
-// (function addListener() {
-//   const addTodoBtn = document.getElementById("submit-todo");
-//   addTodoBtn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//   });
-// })();
+(function addListener() {
+  const addTodoBtn = document.getElementById("submit-todo");
+  addTodoBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    pushTodoToProject(CreateTodo("Tom"));
+  });
+})();
