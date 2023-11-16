@@ -3,10 +3,11 @@ export default function CreateTodo(name) {
 }
 
 export function handleDropdown() {
-  const dropBtn = document.getElementById("myDropdown");
+  const dropBtn = document.querySelector(".drop-btn");
+  const myDropdown = document.getElementById("myDropdown");
 
   dropBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    // dropBtn.classList.toggle("show-dropdown");
+    myDropdown.classList.toggle("show-dropdown");
   });
 }

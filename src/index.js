@@ -1,6 +1,6 @@
 import "./styles.css";
 import { newProject, clearSubmit } from "./create-project";
-// import { CreateTodo, handleDropdown } from "./create-todo";
+import { CreateTodo, handleDropdown } from "./create-todo";
 import { createLibrarian } from "./librarian";
 
 const librarian = createLibrarian();
@@ -25,6 +25,7 @@ const librarian = createLibrarian();
 
   addTodoBtn.addEventListener("click", () => {
     addTodo.style.display = "flex";
+    handleDropdown();
   });
 })();
 
@@ -44,13 +45,3 @@ const librarian = createLibrarian();
 //     e.preventDefault();
 //   });
 // })();
-
-(function handleDropdown() {
-  const dropBtn = document.querySelector(".drop-btn");
-  const myDropdown = document.getElementById("myDropdown");
-
-  dropBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    myDropdown.classList.toggle("show-dropdown");
-  });
-})();
