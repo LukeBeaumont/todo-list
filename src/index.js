@@ -1,10 +1,9 @@
 import "./styles.css";
 import { newProject, clearSubmit } from "./create-project";
-import { CreateTodo, handleDropdown } from "./create-todo";
+// import { CreateTodo, handleDropdown } from "./create-todo";
 import { createLibrarian } from "./librarian";
 
 const librarian = createLibrarian();
-handleDropdown();
 
 (function showAddProject() {
   const addProjectBtn = document.querySelector(".add-project-btn");
@@ -45,3 +44,13 @@ handleDropdown();
 //     e.preventDefault();
 //   });
 // })();
+
+(function handleDropdown() {
+  const dropBtn = document.querySelector(".drop-btn");
+  const myDropdown = document.getElementById("myDropdown");
+
+  dropBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    myDropdown.classList.toggle("show-dropdown");
+  });
+})();
