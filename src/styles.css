@@ -68,3 +68,18 @@ button {
   content: " Please enter a title";
   color: red;
 }
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+  padding-bottom: 3px;
+  width: 17px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 5%;
+  position: relative;
+  top: -64px;
+  left: 140px;
+}
