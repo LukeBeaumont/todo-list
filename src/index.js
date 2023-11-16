@@ -1,9 +1,10 @@
 import "./styles.css";
 import { newProject, clearSubmit } from "./create-project";
-import CreateTodo from "./create-todo";
+import { CreateTodo, handleDropdown } from "./create-todo";
 import { createLibrarian } from "./librarian";
 
 const librarian = createLibrarian();
+handleDropdown();
 
 (function showAddProject() {
   const addProjectBtn = document.querySelector(".add-project-btn");
