@@ -8,3 +8,5 @@ export function createLibrarian() {
     },
   };
 }
+
+export const librarian = createLibrarian();
