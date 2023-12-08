@@ -1,6 +1,6 @@
 import { librarian } from "./librarian";
 
-export function newProject() {
+function newProject() {
   let projectInput = document.getElementById("project-input").value;
 
   // check input is valid
@@ -26,7 +26,7 @@ export function showAddProject() {
   });
 }
 
-export function createProject() {
+export function handleProjectSubmit() {
   const submitProjectBtn = document.getElementById("submit-project");
 
   submitProjectBtn.addEventListener("click", (e) => {

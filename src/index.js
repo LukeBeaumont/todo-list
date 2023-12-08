@@ -2,7 +2,7 @@ import "./styles.css";
 import {
   handleProjectCloseBtn,
   showAddProject,
-  createProject,
+  handleProjectSubmit,
 } from "./create-project";
 import {
   CreateTodo,
@@ -14,7 +14,7 @@ import {
 
 (function handleAddProject() {
   showAddProject();
-  createProject();
+  handleProjectSubmit();
   handleProjectCloseBtn();
 })();
 

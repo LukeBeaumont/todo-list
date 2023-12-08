@@ -1,4 +1,5 @@
 import { librarian } from "./librarian";
+
 export function CreateTodo(title, description, due, priority) {
   return {
     title: title,
@@ -23,11 +24,12 @@ export function handleDropdown() {
 
   dropBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    //Clear list here, needs googling
     displayPickProjectList(librarian.mainArr);
     myDropdown.classList.toggle("show-dropdown");
   });
 }
-
+//creates elements and adds to DOM
 function displayPickProjectList(mainArr) {
   const dropdownContent = document.querySelector(".dropdown-content");
   for (let i = 0; i < mainArr.length; i++) {
