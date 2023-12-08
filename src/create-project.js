@@ -24,4 +24,5 @@ export function clearSubmit() {
 
 export function handleCloseBtn() {
   const closeBtn = document.querySelector(".close-btn");
+  closeBtn.addEventListener("click", ()=> {})
 }

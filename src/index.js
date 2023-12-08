@@ -43,6 +43,7 @@ export const librarian = createLibrarian();
   const addTodoBtn = document.getElementById("submit-todo");
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    pushTodoToProject(CreateTodo("Tom"));
+    pushTodoToProject(CreateTodo());
   });
 })();
+
