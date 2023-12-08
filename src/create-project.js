@@ -45,7 +45,7 @@ export function clearSubmit() {
 
 export function handleCloseBtn() {
   const addProjectForm = document.querySelector(".add-project");
-  const closeBtn = document.querySelector(".close-btn");
+  const closeBtn = document.getElementById("project-close-btn");
   closeBtn.addEventListener("click", () => {
     addProjectForm.style.display = "none";
     document.querySelector("#project-input").value = "";

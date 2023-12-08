@@ -80,10 +80,20 @@ button {
   border: 1px solid red;
   border-radius: 5px;
   color: red;
+
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+#project-close-btn {
   position: relative;
   top: -64px;
   left: 140px;
-  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+#todo-close-btn {
+  position: relative;
+  top: -65px;
+  left: 253px;
 }
 
 .close-btn:hover {
