@@ -1,12 +1,20 @@
 import { librarian } from "./librarian";
 
-export function CreateTodo(title, description, due, priority) {
+function CreateTodo(title, description, due, priority) {
   return {
     title: title,
     description: description,
     dueDate: due,
     priority: priority,
   };
+}
+
+function handleNewTodo() {
+  let todoTitle = document.querySelector("#todo-title").value;
+  let todoDescription = document.querySelector("#todo-description").value;
+  let todoDue = document.querySelector("#todo-Due").value;
+
+  const toDo = 
 }
 
 export function pushTodoToProject(todo) {

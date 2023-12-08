@@ -5,7 +5,6 @@ import {
   handleProjectSubmit,
 } from "./create-project";
 import {
-  CreateTodo,
   handleDropdown,
   pushTodoToProject,
   handleTodoCloseBtn,
