@@ -43,10 +43,10 @@ export function clearSubmit() {
   document.querySelector("#project-input").value = "";
 }
 
-export function handleCloseBtn() {
+export function handleProjectCloseBtn() {
   const addProjectForm = document.querySelector(".add-project");
-  const closeBtn = document.getElementById("project-close-btn");
-  closeBtn.addEventListener("click", () => {
+  const projectCloseBtn = document.getElementById("project-close-btn");
+  projectCloseBtn.addEventListener("click", () => {
     addProjectForm.style.display = "none";
     document.querySelector("#project-input").value = "";
   });

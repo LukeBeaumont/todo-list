@@ -1,25 +1,27 @@
 import "./styles.css";
 import {
-  handleCloseBtn,
+  handleProjectCloseBtn,
   showAddProject,
   createProject,
 } from "./create-project";
-import { CreateTodo, handleDropdown, pushTodoToProject } from "./create-todo";
+import {
+  CreateTodo,
+  handleDropdown,
+  pushTodoToProject,
+  handleTodoCloseBtn,
+  showAddTodo,
+} from "./create-todo";
 
 (function handleAddProject() {
   showAddProject();
   createProject();
-  handleCloseBtn();
+  handleProjectCloseBtn();
 })();
 
-(function showAddTodo() {
-  const addTodoBtn = document.querySelector(".add-todo-btn");
-  const addTodo = document.querySelector(".add-todo");
-
-  addTodoBtn.addEventListener("click", () => {
-    addTodo.style.display = "flex";
-    handleDropdown();
-  });
+(function HandleAddTodo() {
+  showAddTodo();
+  handleTodoCloseBtn();
+  handleDropdown();
 })();
 
 (function addListener() {

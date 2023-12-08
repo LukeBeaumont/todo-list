@@ -36,3 +36,24 @@ function displayPickProjectList(mainArr) {
     dropdownContent.appendChild(listItem);
   }
 }
+
+export function handleTodoCloseBtn() {
+  const addTodoForm = document.querySelector(".add-todo");
+  const todoCloseBtn = document.getElementById("todo-close-btn");
+  todoCloseBtn.addEventListener("click", () => {
+    addTodoForm.style.display = "none";
+    document.querySelector("#todo-title").value = "";
+    document.querySelector("#todo-description").value = "";
+    document.querySelector("#due").value = "";
+    //CLEAR RADIO BUTTON
+  });
+}
+
+export function showAddTodo() {
+  const addTodoBtn = document.querySelector(".add-todo-btn");
+  const addTodo = document.querySelector(".add-todo");
+
+  addTodoBtn.addEventListener("click", () => {
+    addTodo.style.display = "flex";
+  });
+}
