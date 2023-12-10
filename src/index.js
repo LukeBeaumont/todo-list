@@ -6,9 +6,9 @@ import {
 } from "./create-project";
 import {
   handleDropdown,
-  pushTodoToProject,
   handleTodoCloseBtn,
   showAddTodo,
+  handleNewTodo,
 } from "./create-todo";
 
 (function handleAddProject() {
@@ -27,6 +27,12 @@ import {
   const addTodoBtn = document.getElementById("submit-todo");
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    pushTodoToProject(CreateTodo());
+    handleNewTodo();
   });
 })();
+
+// const myForm = document.querySelector(".form");
+// const selectedRadioBtn = myForm.querySelector(
+//   "input[type='radio'][name=priority]:checked"
+// ).value;
+// console.log(selectedRadioBtn);

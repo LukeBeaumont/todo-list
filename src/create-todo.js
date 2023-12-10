@@ -9,13 +9,25 @@ function CreateTodo(title, description, due, priority) {
   };
 }
 
-function handleNewTodo() {
+export function handleNewTodo() {
   let todoTitle = document.querySelector("#todo-title").value;
   let todoDescription = document.querySelector("#todo-description").value;
-  let todoDue = document.querySelector("#todo-Due").value;
-  //google how to do radio selection here
+  let todoDue = document.querySelector("#due").value;
+  //  \/needed for radio button selection\/
+  const myForm = document.querySelector(".form");
+  const selectedRadioBtn = myForm.querySelector(
+    "input[type='radio'][name=priority]:checked"
+  ).value;
 
-  const toDo = CreateTodo(todoTitle, todoDescription, todoDue);
+  //Add check to radio button selected
+
+  const toDo = CreateTodo(
+    todoTitle,
+    todoDescription,
+    todoDue,
+    selectedRadioBtn
+  );
+  console.log(toDo);
   return toDo;
 }
 
