@@ -13,8 +13,10 @@ function handleNewTodo() {
   let todoTitle = document.querySelector("#todo-title").value;
   let todoDescription = document.querySelector("#todo-description").value;
   let todoDue = document.querySelector("#todo-Due").value;
+  //google how to do radio selection here
 
-  const toDo = 
+  const toDo = CreateTodo(todoTitle, todoDescription, todoDue);
+  return toDo;
 }
 
 export function pushTodoToProject(todo) {
