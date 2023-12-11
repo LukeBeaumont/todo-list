@@ -29,6 +29,15 @@ export function handleNewTodo() {
   return toDo;
 }
 
+export function handleTodoSubmit() {
+  const addTodoBtn = document.getElementById("submit-todo");
+  addTodoBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    handleNewTodo();
+    //push todo to correct project here
+  });
+}
+
 export function pushTodoToProject(todo) {
   for (let i = 0; i < librarian.mainArr.length; i++) {
     if (i == 1) {
@@ -44,14 +53,14 @@ export function handleDropdown() {
 
   dropBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    //Clear list here, needs googling
-    displayPickProjectList(librarian.mainArr);
+    displayPickProjectList(librarian.projectArray);
     myDropdown.classList.toggle("show-dropdown");
   });
 }
-//creates elements and adds to DOM
+//creates elements and adds to list
 function displayPickProjectList(mainArr) {
   const dropdownContent = document.querySelector(".dropdown-content");
+  dropdownContent.replaceChildren(); // clears list before rendering
   for (let i = 0; i < mainArr.length; i++) {
     const listItem = document.createElement("a");
     listItem.textContent = `${mainArr[i].title}`;

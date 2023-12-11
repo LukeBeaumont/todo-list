@@ -1,9 +1,9 @@
 export function createLibrarian() {
   return {
-    mainArr: [],
+    projectArray: [],
     pushProject: function (project) {
       if (project) {
-        this.mainArr.push(project);
+        this.projectArray.push(project);
       }
     },
   };
