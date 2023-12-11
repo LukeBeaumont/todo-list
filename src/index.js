@@ -23,11 +23,3 @@ import {
   handleTodoSubmit();
   handleTodoCloseBtn();
 })();
-
-function addListener() {
-  const addTodoBtn = document.getElementById("submit-todo");
-  addTodoBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    handleNewTodo();
-  });
-}

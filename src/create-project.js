@@ -33,7 +33,7 @@ export function handleProjectSubmit() {
     e.preventDefault();
     librarian.pushProject(newProject());
     clearSubmit();
-    console.log(librarian.mainArr);
+    console.log(librarian.projectArray);
   });
 }
 

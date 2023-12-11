@@ -38,15 +38,6 @@ export function handleTodoSubmit() {
   });
 }
 
-export function pushTodoToProject(todo) {
-  for (let i = 0; i < librarian.mainArr.length; i++) {
-    if (i == 1) {
-      librarian.mainArr[i].toDos.push(todo);
-      console.log(librarian.mainArr[i]);
-    }
-  }
-}
-
 export function handleDropdown() {
   const dropBtn = document.querySelector(".drop-btn");
   const myDropdown = document.getElementById("myDropdown");
