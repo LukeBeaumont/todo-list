@@ -15,11 +15,9 @@ export function handleNewTodo() {
   let todoDue = document.querySelector("#due").value;
   //  \/needed for radio button selection\/
   const myForm = document.querySelector(".form");
-  const selectedRadioBtn = myForm.querySelector(
+  let selectedRadioBtn = myForm.querySelector(
     "input[type='radio'][name=priority]:checked"
   ).value;
-
-  //Add check to radio button selected
 
   const toDo = CreateTodo(
     todoTitle,
