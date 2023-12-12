@@ -45,8 +45,16 @@ export function handleDropdown() {
   dropBtn.addEventListener("click", (e) => {
     e.preventDefault();
     displayPickProjectList(librarian.projectArray);
+    displaySelectedProject();
     myDropdown.classList.toggle("show-dropdown");
   });
+}
+
+function displaySelectedProject() {
+  let list = document.querySelectorAll("a");
+  list.forEach((item) =>
+    item.addEventListener("click", (e) => console.log(e.target))
+  );
 }
 //creates elements and adds to list
 function displayPickProjectList(mainArr) {
