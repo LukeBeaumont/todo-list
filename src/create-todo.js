@@ -40,14 +40,18 @@ export function handleTodoSubmit() {
 
 export function handleDropdown() {
   const dropBtn = document.querySelector(".drop-btn");
-  const myDropdown = document.getElementById("myDropdown");
 
   dropBtn.addEventListener("click", (e) => {
     e.preventDefault();
     displayPickProjectList(librarian.projectArray);
     displaySelectedProject();
-    myDropdown.classList.toggle("show-dropdown");
+    toggleDropdown();
   });
+}
+
+function toggleDropdown() {
+  const myDropdown = document.getElementById("myDropdown");
+  myDropdown.classList.toggle("show-dropdown");
 }
 
 function inputProjectText(project) {
@@ -58,9 +62,10 @@ function inputProjectText(project) {
 function displaySelectedProject() {
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
-    item.addEventListener("click", (e) =>
-      inputProjectText(e.target.textContent)
-    )
+    item.addEventListener("click", (e) => {
+      inputProjectText(e.target.textContent);
+      toggleDropdown();
+    })
   );
 }
 //creates elements and adds to list
