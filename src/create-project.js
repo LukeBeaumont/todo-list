@@ -5,7 +5,7 @@ function newProject() {
 
   // check input is valid
   if (projectInput) {
-    const project = CreateProject(projectInput);
+    const project = CreateProject(capFirstLetter(projectInput));
     return project;
   }
 }
@@ -15,6 +15,11 @@ function CreateProject(title) {
     title: title,
     toDos: [],
   };
+}
+
+function capFirstLetter(word) {
+  const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+  return capitalized;
 }
 
 export function showAddProject() {
