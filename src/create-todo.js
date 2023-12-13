@@ -50,10 +50,17 @@ export function handleDropdown() {
   });
 }
 
+function inputProjectText(project) {
+  const projectName = document.querySelector(".which-project");
+  projectName.textContent = `Project: ${project}`;
+}
+
 function displaySelectedProject() {
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
-    item.addEventListener("click", (e) => console.log(e.target))
+    item.addEventListener("click", (e) =>
+      inputProjectText(e.target.textContent)
+    )
   );
 }
 //creates elements and adds to list
