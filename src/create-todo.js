@@ -34,7 +34,7 @@ export function handleTodoSubmit() {
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
-    console.log(librarian.projectArray);
+    console.log(getSelectedProjectNumber);
     //push todo to correct project here
   });
 }
@@ -47,6 +47,7 @@ export function handleDropdown() {
     displayPickProjectList(librarian.projectArray);
     displaySelectedProject();
     toggleDropdown();
+    getSelectedProjectNumber();
   });
 }
 
@@ -76,6 +77,7 @@ function getSelectedProjectNumber() {
   list.forEach((item) =>
     item.addEventListener("click", (e) => {
       projectNumber = e.target.id;
+      console.log(projectNumber);
     })
   );
   return projectNumber;
