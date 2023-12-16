@@ -33,7 +33,8 @@ export function handleTodoSubmit() {
   const addTodoBtn = document.getElementById("submit-todo");
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    handleNewTodo();
+    pushTodoToProject(handleNewTodo());
+    console.log(librarian.projectArray);
     //push todo to correct project here
   });
 }
@@ -68,6 +69,22 @@ function displaySelectedProject() {
     })
   );
 }
+
+function getSelectedProjectNumber() {
+  let projectNumber;
+  let list = document.querySelectorAll("a");
+  list.forEach((item) =>
+    item.addEventListener("click", (e) => {
+      projectNumber = e.target.id;
+    })
+  );
+  return projectNumber;
+}
+
+function pushTodoToProject(toDo) {
+  librarian.projectArray[0].toDos.push(toDo);
+}
+
 //creates elements and adds to list
 function displayPickProjectList(mainArr) {
   const dropdownContent = document.querySelector(".dropdown-content");
