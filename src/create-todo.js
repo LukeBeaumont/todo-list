@@ -75,6 +75,7 @@ function displayPickProjectList(mainArr) {
   for (let i = 0; i < mainArr.length; i++) {
     const listItem = document.createElement("a");
     listItem.textContent = `${mainArr[i].title}`;
+    listItem.setAttribute("id", i);
     dropdownContent.appendChild(listItem);
   }
 }
