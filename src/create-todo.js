@@ -70,19 +70,19 @@ function displaySelectedProject() {
     })
   );
 }
-let projectNumber;
+
 function getSelectedProjectNumber() {
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
     item.addEventListener("click", (e) => {
-      projectNumber = e.target.id;
-      console.log(projectNumber);
+      librarian.projectNumber = e.target.id;
+      console.log(librarian.projectNumber);
     })
   );
 }
 
 function pushTodoToProject(toDo) {
-  librarian.projectArray[projectNumber].toDos.push(toDo);
+  librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
 }
 
 //creates elements and adds to list
