@@ -9,7 +9,7 @@ function CreateTodo(title, description, due, priority) {
   };
 }
 
-export function handleNewTodo() {
+function handleNewTodo() {
   let todoTitle = document.querySelector("#todo-title").value;
   let todoDescription = document.querySelector("#todo-description").value;
   let todoDue = document.querySelector("#due").value;
