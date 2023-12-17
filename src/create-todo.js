@@ -34,7 +34,7 @@ export function handleTodoSubmit() {
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
-    console.log(getSelectedProjectNumber);
+    console.log(getSelectedProjectNumber.projectNumber);
     //push todo to correct project here
   });
 }
@@ -70,9 +70,8 @@ function displaySelectedProject() {
     })
   );
 }
-
+let projectNumber;
 function getSelectedProjectNumber() {
-  let projectNumber;
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
     item.addEventListener("click", (e) => {
@@ -80,11 +79,10 @@ function getSelectedProjectNumber() {
       console.log(projectNumber);
     })
   );
-  return projectNumber;
 }
 
 function pushTodoToProject(toDo) {
-  librarian.projectArray[0].toDos.push(toDo);
+  librarian.projectArray[projectNumber].toDos.push(toDo);
 }
 
 //creates elements and adds to list
