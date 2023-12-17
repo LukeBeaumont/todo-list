@@ -35,7 +35,6 @@ export function handleTodoSubmit() {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
     console.log(getSelectedProjectNumber.projectNumber);
-    //push todo to correct project here
   });
 }
 
@@ -82,7 +81,11 @@ function getSelectedProjectNumber() {
 }
 
 function pushTodoToProject(toDo) {
-  librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
+  if (librarian.projectNumber) {
+    librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
+  } else if (!librarian.projectNumber) {
+    alert("Please select a project");
+  }
 }
 
 //creates elements and adds to list
