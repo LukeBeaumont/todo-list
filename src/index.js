@@ -23,3 +23,7 @@ import {
   handleTodoSubmit();
   handleTodoCloseBtn();
 })();
+
+// reset radio to default
+// work out why due date is undefined
+// why does it break after no project alert
