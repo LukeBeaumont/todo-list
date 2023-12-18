@@ -1,4 +1,5 @@
 import { librarian } from "./librarian";
+import { renderProjects } from "./dom-stuff";
 
 function newProject() {
   let projectInput = document.getElementById("project-input").value;
@@ -39,6 +40,7 @@ export function handleProjectSubmit() {
     librarian.pushProject(newProject());
     clearSubmit();
     console.log(librarian.projectArray);
+    renderProjects(librarian.projectArray);
   });
 }
 

@@ -23,5 +23,3 @@ import {
   handleTodoSubmit();
   handleTodoCloseBtn();
 })();
-
-(function domStuff() {})();
