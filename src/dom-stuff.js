@@ -11,11 +11,13 @@ export function renderProjects(projectArray) {
 }
 
 export function renderTodos(todoArray) {
-  const todoDiv = document.querySelector(".todo-div");
-  todoDiv.replaceChildren();
-  todoArray.forEach((todo) => {
-    const todoCard = document.createElement("div");
-    todoCard.textContent = `${todo.title},${todo.description},${todo.due},${todo.priority}`;
-    todoDiv.appendChild(todoCard);
-  });
+  if (todoArray) {
+    const todoDiv = document.querySelector(".todo-div");
+    todoDiv.replaceChildren();
+    todoArray.forEach((todo) => {
+      const todoCard = document.createElement("div");
+      todoCard.textContent = `${todo.title},${todo.description},${todo.due},${todo.priority}`;
+      todoDiv.appendChild(todoCard);
+    });
+  } else return;
 }

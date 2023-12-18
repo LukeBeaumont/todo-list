@@ -36,7 +36,7 @@ export function handleTodoSubmit() {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
     console.log(getSelectedProjectNumber.projectNumber);
-    renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+    // renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     clearTodoForm();
   });
 }
