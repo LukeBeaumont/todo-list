@@ -44,17 +44,15 @@ export function handleProjectSubmit() {
   });
 }
 
-export function clearSubmit() {
+function clearSubmit() {
   const addProject = document.querySelector(".add-project");
   addProject.style.display = "none";
   document.querySelector("#project-input").value = "";
 }
 
 export function handleProjectCloseBtn() {
-  const addProjectForm = document.querySelector(".add-project");
   const projectCloseBtn = document.getElementById("project-close-btn");
   projectCloseBtn.addEventListener("click", () => {
-    addProjectForm.style.display = "none";
-    document.querySelector("#project-input").value = "";
+    clearSubmit();
   });
 }

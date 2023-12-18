@@ -9,3 +9,13 @@ export function renderProjects(projectArray) {
     projectList.appendChild(listItem);
   });
 }
+
+export function renderTodos(todoArray) {
+  const todoDiv = document.querySelector(".todo-div");
+  todoDiv.replaceChildren();
+  todoArray.forEach((todo) => {
+    const todoCard = document.createElement("div");
+    todoCard.textContent = `${todo.title},${todo.description},${todo.due},${todo.priority}`;
+    todoDiv.appendChild(todoCard);
+  });
+}

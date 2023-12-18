@@ -1,4 +1,5 @@
 import { librarian } from "./librarian";
+import { renderTodos } from "./dom-stuff";
 
 function CreateTodo(title, description, due, priority) {
   return {
@@ -35,6 +36,8 @@ export function handleTodoSubmit() {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
     console.log(getSelectedProjectNumber.projectNumber);
+    renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+    clearTodoForm();
   });
 }
 
@@ -101,15 +104,19 @@ function displayPickProjectList(mainArr) {
 }
 
 export function handleTodoCloseBtn() {
-  const addTodoForm = document.querySelector(".add-todo");
   const todoCloseBtn = document.getElementById("todo-close-btn");
   todoCloseBtn.addEventListener("click", () => {
-    addTodoForm.style.display = "none";
-    document.querySelector("#todo-title").value = "";
-    document.querySelector("#todo-description").value = "";
-    document.querySelector("#due").value = "";
-    //CLEAR RADIO BUTTON
+    clearTodoForm();
   });
+}
+
+function clearTodoForm() {
+  const addTodoForm = document.querySelector(".add-todo");
+  addTodoForm.style.display = "none";
+  document.querySelector("#todo-title").value = "";
+  document.querySelector("#todo-description").value = "";
+  document.querySelector("#due").value = "";
+  //reset radio button here!
 }
 
 export function showAddTodo() {
