@@ -6,6 +6,7 @@ export function renderProjects(projectArray) {
   projectArray.forEach((project) => {
     const listItem = document.createElement("li");
     listItem.textContent = project.title;
+    listItem.classList.add("Project");
     projectList.appendChild(listItem);
   });
 }
@@ -21,3 +22,5 @@ export function renderTodos(todoArray) {
     });
   } else return;
 }
+
+function addListenerToProjectList() {}
