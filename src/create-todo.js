@@ -1,5 +1,6 @@
 import { librarian } from "./librarian";
 import { renderTodos } from "./dom-stuff";
+import { addListenerToProjectList } from "./dom-stuff";
 
 function CreateTodo(title, description, due, priority) {
   return {
@@ -36,8 +37,9 @@ export function handleTodoSubmit() {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
     console.log(getSelectedProjectNumber.projectNumber);
-    // renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+    renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     clearTodoForm();
+    addListenerToProjectList();
   });
 }
 
