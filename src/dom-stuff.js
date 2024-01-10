@@ -23,11 +23,11 @@ export function renderTodos(todoArray) {
   } else return;
 }
 
-export function addListenerToProjectList() {
-  const projects = document.querySelectorAll(".project");
-  projects.forEach((project) =>
-    project.addEventListener("click", (e) => {
-      renderTodos(librarian.projectArray[howtodothis].toDos);
-    })
-  );
-}
+// export function addListenerToProjectList() {
+//   const projects = document.querySelectorAll(".project");
+//   projects.forEach((project) =>
+//     project.addEventListener("click", (e) => {
+//       renderTodos(librarian.projectArray[howtodothis].toDos);
+//     })
+//   );
+// }
