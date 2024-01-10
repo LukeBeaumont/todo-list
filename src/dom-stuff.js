@@ -31,3 +31,8 @@ export function renderTodos(todoArray) {
 //     })
 //   );
 // }
+
+function highlightSelectedProject() {
+  use selected project number to add a bg colour to project list item
+// call on initial todo creation and when each project is clicked
+}

@@ -25,5 +25,3 @@ import {
 })();
 
 // reset radio to default
-// work out why due date is undefined
-// only clear form if todo is added
