@@ -6,7 +6,7 @@ function CreateTodo(title, description, due, priority) {
   return {
     title: title,
     description: description,
-    dueDate: due,
+    due: due,
     priority: priority,
   };
 }
@@ -14,7 +14,7 @@ function CreateTodo(title, description, due, priority) {
 function handleNewTodo() {
   let todoTitle = document.querySelector("#todo-title").value;
   let todoDescription = document.querySelector("#todo-description").value;
-  let todoDue = document.querySelector("#due").value;
+  let todoDue = document.querySelector("#todo-due").value;
   //  \/needed for radio button selection\/
   const myForm = document.querySelector(".form");
   let selectedRadioBtn = myForm.querySelector(
@@ -39,7 +39,6 @@ export function handleTodoSubmit() {
     console.log(getSelectedProjectNumber.projectNumber);
     renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     clearTodoForm();
-    addListenerToProjectList();
   });
 }
 
@@ -117,7 +116,7 @@ function clearTodoForm() {
   addTodoForm.style.display = "none";
   document.querySelector("#todo-title").value = "";
   document.querySelector("#todo-description").value = "";
-  document.querySelector("#due").value = "";
+  document.querySelector("#todo-due").value = "";
   //reset radio button here!
 }
 
