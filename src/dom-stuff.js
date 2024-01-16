@@ -32,7 +32,8 @@ export function renderTodos(todoArray) {
 //   );
 // }
 
-function highlightSelectedProject() {
-  use selected project number to add a bg colour to project list item
-// call on initial todo creation and when each project is clicked
+export function highlightSelectedProject(projectNum) {
+  let projectsOnList = document.querySelectorAll(".project");
+  projectsOnList.forEach(console.log(projectsOnList));
+  // call on initial todo creation and when each project is clicked
 }

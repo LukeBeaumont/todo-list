@@ -58,7 +58,7 @@ function toggleDropdown() {
   const myDropdown = document.getElementById("myDropdown");
   myDropdown.classList.toggle("show-dropdown");
 }
-
+// the next two functions set the selected project name on the create todo form prior to submit/
 function inputProjectText(project) {
   const projectName = document.querySelector(".which-project");
   projectName.textContent = `Project: ${project}`;
