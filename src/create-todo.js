@@ -36,7 +36,7 @@ export function handleTodoSubmit() {
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
     pushTodoToProject(handleNewTodo());
-    console.log(getSelectedProjectNumber.projectNumber);
+    console.log(setSelectedProjectNumber.projectNumber);
     renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     clearTodoForm();
   });
@@ -50,7 +50,7 @@ export function handleDropdown() {
     displayPickProjectList(librarian.projectArray);
     displaySelectedProject();
     toggleDropdown();
-    getSelectedProjectNumber();
+    setSelectedProjectNumber();
   });
 }
 
@@ -74,7 +74,7 @@ function displaySelectedProject() {
   );
 }
 
-function getSelectedProjectNumber() {
+function setSelectedProjectNumber() {
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
     item.addEventListener("click", (e) => {
