@@ -3,10 +3,11 @@ import { librarian } from "./librarian";
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
   projectList.replaceChildren();
-  projectArray.forEach((project) => {
+  projectArray.forEach((project, i) => {
     const listItem = document.createElement("li");
     listItem.textContent = project.title;
     listItem.classList.add("project");
+    listItem.setAttribute("id", i);
     projectList.appendChild(listItem);
   });
 }
