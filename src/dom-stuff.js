@@ -35,6 +35,11 @@ export function renderTodos(todoArray) {
 
 export function highlightSelectedProject(projectNum) {
   let projectsOnList = document.querySelectorAll(".project");
-  projectsOnList.forEach(console.log(projectsOnList));
+  projectsOnList[projectNum].style.backgroundColor = "purple";
   // call on initial todo creation and when each project is clicked
+}
+
+export function clearHighlightedProject() {
+  let projectsOnList = document.querySelectorAll(".project");
+  projectsOnList.forEach((project) => (project.style.backgroundColor = ""));
 }

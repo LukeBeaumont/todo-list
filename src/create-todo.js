@@ -1,5 +1,9 @@
 import { librarian } from "./librarian";
-import { renderTodos } from "./dom-stuff";
+import {
+  highlightSelectedProject,
+  clearHighlightedProject,
+  renderTodos,
+} from "./dom-stuff";
 import { addListenerToProjectList } from "./dom-stuff";
 
 function CreateTodo(title, description, due, priority) {
@@ -35,9 +39,11 @@ export function handleTodoSubmit() {
   const addTodoBtn = document.getElementById("submit-todo");
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    clearHighlightedProject();
     pushTodoToProject(handleNewTodo());
     console.log(setSelectedProjectNumber.projectNumber);
     renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+    highlightSelectedProject(librarian.projectNumber);
     clearTodoForm();
   });
 }
