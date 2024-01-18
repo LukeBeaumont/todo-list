@@ -49,7 +49,6 @@ export function handleTodoSubmit() {
       highlightSelectedProject(librarian.projectNumber);
       clearTodoForm();
     } else alert("Please select a project");
-    addHighlightClickListeners();
   });
 }
 
