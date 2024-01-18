@@ -40,11 +40,13 @@ export function handleTodoSubmit() {
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
     clearHighlightedProject();
-    pushTodoToProject(handleNewTodo());
-    console.log(setSelectedProjectNumber.projectNumber);
-    renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
-    highlightSelectedProject(librarian.projectNumber);
-    clearTodoForm();
+    if (librarian.projectNumber) {
+      pushTodoToProject(handleNewTodo());
+      console.log(setSelectedProjectNumber.projectNumber);
+      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+      highlightSelectedProject(librarian.projectNumber);
+      clearTodoForm();
+    } else alert("Please select a project");
   });
 }
 
@@ -91,11 +93,7 @@ function setSelectedProjectNumber() {
 }
 
 function pushTodoToProject(toDo) {
-  if (librarian.projectNumber) {
-    librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
-  } else if (!librarian.projectNumber) {
-    alert("Please select a project");
-  }
+  librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
 }
 
 //creates elements and adds to list

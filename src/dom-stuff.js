@@ -22,7 +22,7 @@ export function renderTodos(todoArray) {
       todoCard.textContent = `${todo.title},${todo.description},${todo.due},${todo.priority}`;
       todoDiv.appendChild(todoCard);
     });
-  } else return;
+  }
 }
 
 // export function addListenerToProjectList() {
