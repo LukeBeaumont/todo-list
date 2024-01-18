@@ -3,6 +3,7 @@ import {
   highlightSelectedProject,
   clearHighlightedProject,
   renderTodos,
+  addHighlightClickListeners,
 } from "./dom-stuff";
 import { addListenerToProjectList } from "./dom-stuff";
 
@@ -40,6 +41,7 @@ export function handleTodoSubmit() {
   addTodoBtn.addEventListener("click", (e) => {
     e.preventDefault();
     clearHighlightedProject();
+    //checks if project exists yet and has been selected
     if (librarian.projectNumber) {
       pushTodoToProject(handleNewTodo());
       console.log(setSelectedProjectNumber.projectNumber);
@@ -47,6 +49,7 @@ export function handleTodoSubmit() {
       highlightSelectedProject(librarian.projectNumber);
       clearTodoForm();
     } else alert("Please select a project");
+    addHighlightClickListeners();
   });
 }
 

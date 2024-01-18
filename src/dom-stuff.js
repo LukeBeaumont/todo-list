@@ -12,7 +12,6 @@ export function renderProjects(projectArray) {
   });
 }
 
-/// needs to not break when no todo array exists yet
 export function renderTodos(todoArray) {
   if (todoArray) {
     const todoDiv = document.querySelector(".todo-div");
@@ -25,22 +24,25 @@ export function renderTodos(todoArray) {
   }
 }
 
-// export function addListenerToProjectList() {
-//   const projects = document.querySelectorAll(".project");
-//   projects.forEach((project) =>
-//     project.addEventListener("click", (e) => {
-//       renderTodos(librarian.projectArray[howtodothis].toDos);
-//     })
-//   );
-// }
-
 export function highlightSelectedProject(projectNum) {
   let projectsOnList = document.querySelectorAll(".project");
   projectsOnList[projectNum].style.backgroundColor = "purple";
   // call on initial todo creation and when each project is clicked
 }
 
+export function highlightNewProject() {}
+
 export function clearHighlightedProject() {
   let projectsOnList = document.querySelectorAll(".project");
   projectsOnList.forEach((project) => (project.style.backgroundColor = ""));
+}
+
+export function addHighlightClickListeners() {
+  let projectsOnList = document.querySelectorAll(".project");
+  projectsOnList.forEach((project) =>
+    project.addEventListener("click", () => {
+      clearHighlightedProject();
+      project.style.backgroundColor = "purple";
+    })
+  );
 }

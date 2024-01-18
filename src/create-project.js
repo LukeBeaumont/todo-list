@@ -1,10 +1,5 @@
 import { librarian } from "./librarian";
-import {
-  renderProjects,
-  renderTodos,
-  highlightSelectedProject,
-  clearHighlightedProject,
-} from "./dom-stuff";
+import { renderProjects, highlightNewProject } from "./dom-stuff";
 
 function newProject() {
   let projectInput = document.getElementById("project-input").value;
@@ -46,6 +41,7 @@ export function handleProjectSubmit() {
     clearSubmit();
     console.log(librarian.projectArray);
     renderProjects(librarian.projectArray);
+    highlightNewProject();
   });
 }
 
