@@ -1,5 +1,10 @@
 import { librarian } from "./librarian";
-import { renderProjects } from "./dom-stuff";
+import {
+  renderProjects,
+  renderTodos,
+  highlightSelectedProject,
+  clearHighlightedProject,
+} from "./dom-stuff";
 
 function newProject() {
   let projectInput = document.getElementById("project-input").value;

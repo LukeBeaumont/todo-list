@@ -12,6 +12,7 @@ export function renderProjects(projectArray) {
   });
 }
 
+/// needs to not break when no todo array exists yet
 export function renderTodos(todoArray) {
   if (todoArray) {
     const todoDiv = document.querySelector(".todo-div");
