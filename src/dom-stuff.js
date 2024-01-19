@@ -41,6 +41,8 @@ export function addHighlightClickListeners() {
     project.addEventListener("click", () => {
       clearHighlightedProject();
       project.style.backgroundColor = "purple";
+      //setproject number here
+      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     })
   );
 }
