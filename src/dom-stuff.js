@@ -30,8 +30,6 @@ export function highlightSelectedProject(projectNum) {
   // call on initial todo creation and when each project is clicked
 }
 
-export function highlightNewProject() {}
-
 export function clearHighlightedProject() {
   let projectsOnList = document.querySelectorAll(".project");
   projectsOnList.forEach((project) => (project.style.backgroundColor = ""));

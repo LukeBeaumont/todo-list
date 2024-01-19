@@ -1,5 +1,9 @@
 import { librarian } from "./librarian";
-import { renderProjects, highlightSelectedProject } from "./dom-stuff";
+import {
+  renderProjects,
+  highlightSelectedProject,
+  addHighlightClickListeners,
+} from "./dom-stuff";
 
 function newProject() {
   let projectInput = document.getElementById("project-input").value;
@@ -44,6 +48,7 @@ export function handleProjectSubmit() {
     let projectNumToString = librarian.projectArray.length - 1;
     console.log(projectNumToString.toString());
     highlightSelectedProject(projectNumToString.toString());
+    addHighlightClickListeners();
   });
 }
 
