@@ -41,12 +41,9 @@ export function handleProjectSubmit() {
     clearSubmit();
     console.log(librarian.projectArray);
     renderProjects(librarian.projectArray);
-    if (librarian.projectNumber !== "") {
-      librarian.projectNumber += 1;
-    } else librarian.projectNumber = 0;
-
-    highlightSelectedProject(librarian.projectNumber);
-    console.log(librarian.projectNumber);
+    let projectNumToString = librarian.projectArray.length - 1;
+    console.log(projectNumToString.toString());
+    highlightSelectedProject(projectNumToString.toString());
   });
 }
 
