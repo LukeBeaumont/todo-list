@@ -44,7 +44,6 @@ export function handleTodoSubmit() {
     //checks if project exists yet and has been selected
     if (librarian.projectNumber) {
       pushTodoToProject(handleNewTodo());
-      console.log(setSelectedProjectNumber.projectNumber);
       renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
       highlightSelectedProject(librarian.projectNumber);
       clearTodoForm();
@@ -84,7 +83,7 @@ function displaySelectedProject() {
   );
 }
 
-function setSelectedProjectNumber() {
+export function setSelectedProjectNumber() {
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
     item.addEventListener("click", (e) => {

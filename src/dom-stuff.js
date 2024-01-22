@@ -1,5 +1,5 @@
 import { librarian } from "./librarian";
-
+import { setSelectedProjectNumber } from "./create-todo";
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
   projectList.replaceChildren();
@@ -38,11 +38,12 @@ export function clearHighlightedProject() {
 export function addHighlightClickListeners() {
   let projectsOnList = document.querySelectorAll(".project");
   projectsOnList.forEach((project) =>
-    project.addEventListener("click", () => {
+    project.addEventListener("click", (e) => {
       clearHighlightedProject();
       project.style.backgroundColor = "purple";
-      //setproject number here
+      librarian.projectNumber = e.target.id;
       renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+      console.log(librarian.projectNumber);
     })
   );
 }
