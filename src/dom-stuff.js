@@ -27,7 +27,6 @@ export function renderTodos(todoArray) {
 export function highlightSelectedProject(projectNum) {
   let projectsOnList = document.querySelectorAll(".project");
   projectsOnList[projectNum].style.backgroundColor = "purple";
-  // call on initial todo creation and when each project is clicked
 }
 
 export function clearHighlightedProject() {
@@ -47,3 +46,6 @@ export function addHighlightClickListeners() {
     })
   );
 }
+
+//chnage project number to array length when adding new project
+// add delete buttons to projects and todos

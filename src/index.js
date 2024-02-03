@@ -23,5 +23,3 @@ import {
   handleTodoSubmit();
   handleTodoCloseBtn();
 })();
-
-// reset radio to default

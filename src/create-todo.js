@@ -83,7 +83,7 @@ function displaySelectedProject() {
   );
 }
 
-export function setSelectedProjectNumber() {
+function setSelectedProjectNumber() {
   let list = document.querySelectorAll("a");
   list.forEach((item) =>
     item.addEventListener("click", (e) => {
