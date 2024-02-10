@@ -47,5 +47,4 @@ export function addHighlightClickListeners() {
   );
 }
 
-//chnage project number to array length when adding new project
 // add delete buttons to projects and todos
