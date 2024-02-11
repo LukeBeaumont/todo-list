@@ -3,9 +3,7 @@ import {
   highlightSelectedProject,
   clearHighlightedProject,
   renderTodos,
-  addHighlightClickListeners,
 } from "./dom-stuff";
-import { addListenerToProjectList } from "./dom-stuff";
 
 function CreateTodo(title, description, due, priority) {
   return {

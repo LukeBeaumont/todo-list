@@ -1,5 +1,5 @@
 import { librarian } from "./librarian";
-import { setSelectedProjectNumber } from "./create-todo";
+
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
   projectList.replaceChildren();
