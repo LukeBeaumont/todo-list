@@ -149,3 +149,7 @@ button {
 .show-dropdown {
   display: block;
 }
+
+.delete {
+  color: red;
+}

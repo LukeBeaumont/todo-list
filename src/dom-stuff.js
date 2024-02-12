@@ -5,11 +5,23 @@ export function renderProjects(projectArray) {
   projectList.replaceChildren();
   projectArray.forEach((project, i) => {
     const listItem = document.createElement("li");
+    const deleteBtn = document.createElement("button");
+    deleteBtn.addEventListener("click", () => {
+      deleteProject(i);
+    });
+    deleteBtn.textContent = "Remove";
+    deleteBtn.classList.add("delete");
     listItem.textContent = project.title;
     listItem.classList.add("project");
     listItem.setAttribute("id", i);
     projectList.appendChild(listItem);
+    projectList.appendChild(deleteBtn);
   });
+}
+
+function deleteProject(index) {
+  librarian.projectArray.splice(index, 1);
+  renderProjects(librarian.projectArray);
 }
 
 export function renderTodos(todoArray) {
