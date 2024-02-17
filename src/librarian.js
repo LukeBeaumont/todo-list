@@ -1,5 +1,6 @@
 export function createLibrarian() {
   return {
+    projectName: "",
     projectNumber: "",
     projectArray: [],
     pushProject: function (project) {

@@ -9,7 +9,7 @@ export function renderProjects(projectArray) {
     deleteBtn.addEventListener("click", () => {
       deleteProject(i);
     });
-    deleteBtn.textContent = "Remove";
+    deleteBtn.textContent = "X";
     deleteBtn.classList.add("delete");
     listItem.textContent = project.title;
     listItem.classList.add("project");

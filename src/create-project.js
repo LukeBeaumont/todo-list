@@ -7,9 +7,11 @@ import {
 
 function newProject() {
   let projectInput = document.getElementById("project-input").value;
-
+  librarian.projectName = projectInput;
   // check input is valid
-  if (projectInput) {
+  if (!projectInput) {
+    alert("Please enter a project name");
+  } else if (projectInput) {
     const project = CreateProject(capFirstLetter(projectInput));
     return project;
   }
@@ -47,7 +49,9 @@ export function handleProjectSubmit() {
     renderProjects(librarian.projectArray);
     let projectNumToString = librarian.projectArray.length - 1;
     console.log(projectNumToString.toString());
-    highlightSelectedProject(projectNumToString.toString());
+    if (librarian.projectName) {
+      highlightSelectedProject(projectNumToString.toString());
+    }
     addHighlightClickListeners();
   });
 }
