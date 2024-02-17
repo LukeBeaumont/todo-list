@@ -15,7 +15,7 @@ export function renderProjects(projectArray) {
     listItem.classList.add("project");
     listItem.setAttribute("id", i);
     projectList.appendChild(listItem);
-    projectList.appendChild(deleteBtn);
+    listItem.appendChild(deleteBtn);
   });
 }
 

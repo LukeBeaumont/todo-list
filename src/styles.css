@@ -41,8 +41,6 @@ ul {
 }
 
 li {
-  width: 100px;
-  height: 30px;
 }
 
 .add-todo,
@@ -160,13 +158,10 @@ li {
 }
 
 .delete {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-flex;
+  justify-self: flex-end;
+  padding: 3px;
   color: red;
-  height: 15px;
-  width: 15px;
   cursor: pointer;
   border: 1px solid black;
-  padding-bottom: 2px;
 }
