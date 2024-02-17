@@ -5,11 +5,11 @@ export function renderProjects(projectArray) {
   projectList.replaceChildren();
   projectArray.forEach((project, i) => {
     const listItem = document.createElement("li");
-    const deleteBtn = document.createElement("button");
+    const deleteBtn = document.createElement("div");
     deleteBtn.addEventListener("click", () => {
       deleteProject(i);
     });
-    deleteBtn.textContent = "X";
+    deleteBtn.textContent = "x";
     deleteBtn.classList.add("delete");
     listItem.textContent = project.title;
     listItem.classList.add("project");

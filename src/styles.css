@@ -36,6 +36,15 @@ button {
   margin: 10px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  width: 100px;
+  height: 30px;
+}
+
 .add-todo,
 .add-project {
   flex-direction: column;
@@ -151,5 +160,13 @@ button {
 }
 
 .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: red;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+  padding-bottom: 2px;
 }
