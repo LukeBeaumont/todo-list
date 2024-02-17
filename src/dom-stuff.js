@@ -22,6 +22,7 @@ export function renderProjects(projectArray) {
 function deleteProject(index) {
   librarian.projectArray.splice(index, 1);
   renderProjects(librarian.projectArray);
+  addHighlightClickListeners();
 }
 
 export function renderTodos(todoArray) {
