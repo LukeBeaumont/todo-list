@@ -54,10 +54,10 @@ export function addHighlightClickListeners() {
       clearHighlightedProject();
       project.style.backgroundColor = "purple";
       librarian.projectNumber = e.target.id;
-      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+
       console.log(librarian.projectNumber);
     })
   );
 }
-
+//fix bug due to button being inisde list item,
 // add delete buttons to projects and todos
