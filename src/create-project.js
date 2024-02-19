@@ -42,14 +42,11 @@ export function handleProjectSubmit() {
     e.preventDefault();
     librarian.pushProject(newProject());
     clearSubmit();
-    console.log(librarian.projectArray);
     renderProjects(librarian.projectArray);
-    let projectNumToString = librarian.projectArray.length - 1;
-    console.log(projectNumToString.toString());
-    if (librarian.projectName) {
-      highlightSelectedProject(projectNumToString.toString());
-    }
+    highlightSelectedProject((librarian.projectArray.length - 1).toString());
     addHighlightClickListeners();
+    console.log(librarian.projectArray);
+    console.log((librarian.projectArray.length - 1).toString());
   });
 }
 

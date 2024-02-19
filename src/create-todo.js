@@ -95,7 +95,7 @@ function pushTodoToProject(toDo) {
   librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
 }
 
-//creates elements and adds to list
+//creates project list element and adds to list
 function displayPickProjectList(mainArr) {
   const dropdownContent = document.querySelector(".dropdown-content");
   dropdownContent.replaceChildren(); // clears list before rendering
