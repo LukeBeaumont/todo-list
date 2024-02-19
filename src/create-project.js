@@ -7,7 +7,6 @@ import {
 
 function newProject() {
   let projectInput = document.getElementById("project-input").value;
-  librarian.projectName = projectInput;
   // check input is valid
   if (projectInput) {
     const project = CreateProject(capFirstLetter(projectInput));
