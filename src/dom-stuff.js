@@ -52,12 +52,12 @@ export function addHighlightClickListeners() {
   projectsOnList.forEach((project) =>
     project.addEventListener("click", (e) => {
       clearHighlightedProject();
-      project.style.backgroundColor = "purple";
       librarian.projectNumber = e.target.id;
-
+      highlightSelectedProject(librarian.projectNumber);
+      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
       console.log(librarian.projectNumber);
     })
   );
 }
-//fix bug due to button being inisde list item,
+//fix bug due to delte button
 // add delete buttons to projects and todos
