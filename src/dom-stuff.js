@@ -59,12 +59,12 @@ export function renderTodos(todoArray) {
       cardPriority.textContent = `Priority level: ${todo.priority}`;
       cardPriority.classList.add("todo-priority");
 
+      todoCard.appendChild(createTodoDeleteBtn(i));
       todoCard.appendChild(cardTitle);
       todoCard.appendChild(cardDescription);
       todoCard.appendChild(cardDue);
       todoCard.appendChild(cardPriority);
       todoDiv.appendChild(todoCard);
-      todoDiv.appendChild(createTodoDeleteBtn(i));
     });
   }
 }
