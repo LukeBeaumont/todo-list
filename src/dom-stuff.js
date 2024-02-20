@@ -39,7 +39,7 @@ export function renderTodos(todoArray) {
   if (todoArray) {
     const todoDiv = document.querySelector(".todo-div");
     todoDiv.replaceChildren();
-    todoArray.forEach((todo) => {
+    todoArray.forEach((todo, i) => {
       const todoCard = document.createElement("div");
       todoCard.classList.add("todo-card");
 
@@ -64,8 +64,26 @@ export function renderTodos(todoArray) {
       todoCard.appendChild(cardDue);
       todoCard.appendChild(cardPriority);
       todoDiv.appendChild(todoCard);
+      todoDiv.appendChild(createTodoDeleteBtn(i));
     });
   }
+}
+
+function createTodoDeleteBtn(index) {
+  const deleteBtn = document.createElement("div");
+
+  deleteBtn.textContent = "x";
+  deleteBtn.classList.add("delete");
+  deleteBtn.classList.add("close-btn");
+  deleteBtn.addEventListener("click", () => {
+    deleteTodo(index);
+    renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+  });
+  return deleteBtn;
+}
+
+function deleteTodo(index) {
+  librarian.projectArray[librarian.projectNumber].toDos.splice(index, 1);
 }
 
 export function highlightSelectedProject(projectNum) {
