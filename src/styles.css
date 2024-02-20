@@ -44,6 +44,31 @@ li {
   cursor: pointer;
 }
 
+.todo-card {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  margin: 10px;
+  height: 100px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.todo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: center;
+}
+.todo-description,
+.todo-due,
+.todo-priority {
+  padding: 5px;
+}
+
 .add-todo,
 .add-project {
   flex-direction: column;

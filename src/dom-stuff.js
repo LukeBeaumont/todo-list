@@ -35,7 +35,28 @@ export function renderTodos(todoArray) {
     todoDiv.replaceChildren();
     todoArray.forEach((todo) => {
       const todoCard = document.createElement("div");
-      todoCard.textContent = `${todo.title},${todo.description},${todo.due},${todo.priority}`;
+      todoCard.classList.add("todo-card");
+
+      const cardTitle = document.createElement("div");
+      cardTitle.textContent = `${todo.title}`;
+      cardTitle.classList.add("todo-title");
+
+      const cardDescription = document.createElement("div");
+      cardDescription.textContent = `${todo.description}`;
+      cardDescription.classList.add("todo-description");
+
+      const cardDue = document.createElement("div");
+      cardDue.textContent = `Due on: ${todo.due}`;
+      cardDue.classList.add("todo-due");
+
+      const cardPriority = document.createElement("div");
+      cardPriority.textContent = `Priority level: ${todo.priority}`;
+      cardPriority.classList.add("todo-priority");
+
+      todoCard.appendChild(cardTitle);
+      todoCard.appendChild(cardDescription);
+      todoCard.appendChild(cardDue);
+      todoCard.appendChild(cardPriority);
       todoDiv.appendChild(todoCard);
     });
   }
@@ -66,5 +87,3 @@ export function addHighlightClickListeners() {
     })
   );
 }
-//fix bug due to delte button
-// add delete buttons to projects and todos
