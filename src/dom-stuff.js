@@ -24,6 +24,7 @@ function createProjectDeleteBtn(index) {
     if (!e.target.classList.contains("delete")) {
       renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     }
+    clearTodos();
     addHighlightClickListeners();
   });
   return deleteBtn;
@@ -92,4 +93,7 @@ export function addHighlightClickListeners() {
   );
 }
 
-//clear todos in dom when deleting project
+function clearTodos() {
+  const todoDiv = document.querySelector(".todo-div");
+  todoDiv.replaceChildren();
+}
