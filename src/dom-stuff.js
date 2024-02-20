@@ -15,11 +15,15 @@ export function renderProjects(projectArray) {
 
 function createProjectDeleteBtn(index) {
   const deleteBtn = document.createElement("div");
+
   deleteBtn.textContent = "x";
   deleteBtn.classList.add("delete");
-  deleteBtn.addEventListener("click", () => {
+  deleteBtn.addEventListener("click", (e) => {
     deleteProject(index);
     renderProjects(librarian.projectArray);
+    if (!e.target.classList.contains("delete")) {
+      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+    }
     addHighlightClickListeners();
   });
   return deleteBtn;
@@ -65,7 +69,7 @@ export function renderTodos(todoArray) {
 export function highlightSelectedProject(projectNum) {
   if (projectNum >= 0) {
     let projectsOnList = document.querySelectorAll(".project");
-    projectsOnList[projectNum].style.backgroundColor = "purple";
+    projectsOnList[projectNum].style.backgroundColor = "paleturquoise";
   }
 }
 
@@ -87,3 +91,5 @@ export function addHighlightClickListeners() {
     })
   );
 }
+
+//clear todos in dom when deleting project
