@@ -126,13 +126,13 @@ li {
 #project-close-btn {
   position: relative;
   top: -64px;
-  left: 140px;
+  left: 170px;
 }
 
 #todo-close-btn {
   position: relative;
   top: -65px;
-  left: 253px;
+  left: 273px;
 }
 
 .close-btn:hover {
@@ -190,9 +190,5 @@ li {
 }
 
 .delete {
-  padding: 3px;
-  color: red;
-  cursor: pointer;
-  border: 1px solid black;
   margin-right: 10px;
 }

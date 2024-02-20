@@ -18,6 +18,7 @@ function createProjectDeleteBtn(index) {
 
   deleteBtn.textContent = "x";
   deleteBtn.classList.add("delete");
+  deleteBtn.classList.add("close-btn");
   deleteBtn.addEventListener("click", (e) => {
     deleteProject(index);
     renderProjects(librarian.projectArray);
