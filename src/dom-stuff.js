@@ -5,24 +5,28 @@ export function renderProjects(projectArray) {
   projectList.replaceChildren();
   projectArray.forEach((project, i) => {
     const listItem = document.createElement("li");
-    const deleteBtn = document.createElement("div");
-    deleteBtn.addEventListener("click", () => {
-      deleteProject(i);
-    });
-    deleteBtn.textContent = "x";
-    deleteBtn.classList.add("delete");
     listItem.textContent = project.title;
     listItem.classList.add("project");
     listItem.setAttribute("id", i);
     projectList.appendChild(listItem);
-    listItem.appendChild(deleteBtn);
+    listItem.appendChild(createProjectDeleteBtn(i));
   });
+}
+
+function createProjectDeleteBtn(index) {
+  const deleteBtn = document.createElement("div");
+  deleteBtn.textContent = "x";
+  deleteBtn.classList.add("delete");
+  deleteBtn.addEventListener("click", () => {
+    deleteProject(index);
+    renderProjects(librarian.projectArray);
+    addHighlightClickListeners();
+  });
+  return deleteBtn;
 }
 
 function deleteProject(index) {
   librarian.projectArray.splice(index, 1);
-  renderProjects(librarian.projectArray);
-  addHighlightClickListeners();
 }
 
 export function renderTodos(todoArray) {
@@ -38,8 +42,10 @@ export function renderTodos(todoArray) {
 }
 
 export function highlightSelectedProject(projectNum) {
-  let projectsOnList = document.querySelectorAll(".project");
-  projectsOnList[projectNum].style.backgroundColor = "purple";
+  if (projectNum >= 0) {
+    let projectsOnList = document.querySelectorAll(".project");
+    projectsOnList[projectNum].style.backgroundColor = "purple";
+  }
 }
 
 export function clearHighlightedProject() {
@@ -53,9 +59,10 @@ export function addHighlightClickListeners() {
     project.addEventListener("click", (e) => {
       clearHighlightedProject();
       librarian.projectNumber = e.target.id;
-      highlightSelectedProject(librarian.projectNumber);
-      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
-      console.log(librarian.projectNumber);
+      if (!e.target.classList.contains("delete")) {
+        renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+        highlightSelectedProject(librarian.projectNumber);
+      }
     })
   );
 }
