@@ -34,7 +34,16 @@
           <input type="text" id="todo-description" />
 
           <label for="todo-due">Due by:</label>
-          <input type="text" id="todo-due" />
+
+          <input
+            type="date"
+            id="todo-due"
+            name="todo-due"
+            value="20-02-24"
+            min="2024-01-01"
+            max="2070-12-31"
+          />
+
           <p>Priority:</p>
           <div class="radio">
             <label for="Low">Low</label>
