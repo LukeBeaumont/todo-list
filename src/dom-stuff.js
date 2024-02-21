@@ -17,12 +17,12 @@ function createProjectDeleteBtn(index) {
   const deleteBtn = document.createElement("div");
 
   deleteBtn.textContent = "x";
-  deleteBtn.classList.add("delete");
+  deleteBtn.classList.add("project-delete");
   deleteBtn.classList.add("close-btn");
   deleteBtn.addEventListener("click", (e) => {
     deleteProject(index);
     renderProjects(librarian.projectArray);
-    if (!e.target.classList.contains("delete")) {
+    if (!e.target.classList.contains("project-delete")) {
       renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
     }
     clearTodos();
@@ -73,7 +73,7 @@ function createTodoDeleteBtn(index) {
   const deleteBtn = document.createElement("div");
 
   deleteBtn.textContent = "x";
-  deleteBtn.classList.add("delete");
+  deleteBtn.classList.add("todo-delete");
   deleteBtn.classList.add("close-btn");
   deleteBtn.addEventListener("click", () => {
     deleteTodo(index);
@@ -104,7 +104,7 @@ export function addHighlightClickListeners() {
     project.addEventListener("click", (e) => {
       clearHighlightedProject();
       librarian.projectNumber = e.target.id;
-      if (!e.target.classList.contains("delete")) {
+      if (!e.target.classList.contains("project-delete")) {
         renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
         highlightSelectedProject(librarian.projectNumber);
       }
