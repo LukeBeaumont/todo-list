@@ -10,7 +10,7 @@ body {
 
 .header {
   background-color: var(--main-color);
-  height: 15vh;
+  height: 80px;
   margin: 0;
   color: white;
   justify-content: center;
@@ -20,25 +20,28 @@ body {
 .title {
   margin: 0;
   padding: 30px;
-  padding-top: 40px;
+  padding-top: 20px;
+  font-size: 2rem;
 }
 
 .left-sidebar {
   background-color: var(--main-color);
-  width: clamp(10px, 200px, 250px);
   color: white;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
 }
 
 h2 {
   padding: 0 0 0 25px;
+  font-size: 1.5rem;
 }
 
 .right-content {
   background-color: rgb(208, 208, 208);
-  height: 85vh;
-  width: 80vw;
+  flex-grow: 20;
+  min-height: 100vh;
   border-radius: 15px 0 0 0;
 }
 
@@ -46,7 +49,8 @@ h2 {
   display: flex;
 }
 
-.add-project-btn {
+.add-project-btn,
+.add-todo-btn {
   margin-right: 20px;
   width: 40px;
   font-weight: bold;
@@ -55,6 +59,11 @@ h2 {
   border-radius: 50%;
   align-self: flex-end;
   cursor: pointer;
+}
+
+.add-todo-btn {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 project-list {
