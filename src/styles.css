@@ -1,5 +1,6 @@
 :root {
   --main-color: rgb(35, 8, 98);
+  --highlight-color: rgb(127, 102, 185);
 }
 
 body {
@@ -66,6 +67,8 @@ li {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  padding-left: 15px;
+  border-radius: 5px 0 0 5px;
 }
 
 .todo-card {

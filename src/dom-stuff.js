@@ -89,7 +89,7 @@ function deleteTodo(index) {
 export function highlightSelectedProject(projectNum) {
   if (projectNum >= 0) {
     let projectsOnList = document.querySelectorAll(".project");
-    projectsOnList[projectNum].style.backgroundColor = "paleturquoise";
+    projectsOnList[projectNum].style.backgroundColor = " rgb(127, 102, 185)";
   }
 }
 
