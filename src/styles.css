@@ -24,35 +24,35 @@ body {
 
 .left-sidebar {
   background-color: var(--main-color);
-  height: 85vh;
-  width: 20vw;
+  width: clamp(10px, 200px, 250px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  padding: 0 0 0 25px;
 }
 
 .right-content {
   background-color: rgb(208, 208, 208);
   height: 85vh;
   width: 80vw;
-  border-radius: 15px;
+  border-radius: 15px 0 0 0;
 }
 
 .container {
   display: flex;
 }
 
-button {
-  border-radius: 6px;
-  padding: 5px 10px;
-  margin: 10px;
-  margin-left: 30px;
-}
-
 .add-project-btn {
-  height: auto;
-  width: 45px;
+  margin-right: 10px;
+  width: 40px;
   font-weight: bold;
   font-size: 2rem;
   border: none;
   border-radius: 50%;
+  align-self: flex-end;
 }
 
 project-list {
