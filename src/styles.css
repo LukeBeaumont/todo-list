@@ -1,11 +1,19 @@
+:root {
+  --main-color: rgb(35, 8, 98);
+}
+
 body {
   margin: 0;
+  background-color: var(--main-color);
 }
 
 .header {
-  background-color: lightgoldenrodyellow;
+  background-color: var(--main-color);
   height: 15vh;
   margin: 0;
+  color: white;
+  justify-content: center;
+  display: flex;
 }
 
 .title {
@@ -15,16 +23,16 @@ body {
 }
 
 .left-sidebar {
-  background-color: white;
+  background-color: var(--main-color);
   height: 85vh;
   width: 20vw;
-  border-right: 2px black solid;
 }
 
 .right-content {
-  background-color: peachpuff;
+  background-color: rgb(208, 208, 208);
   height: 85vh;
   width: 80vw;
+  border-radius: 15px;
 }
 
 .container {
@@ -36,6 +44,15 @@ button {
   padding: 5px 10px;
   margin: 10px;
   margin-left: 30px;
+}
+
+.add-project-btn {
+  height: auto;
+  width: 45px;
+  font-weight: bold;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
 }
 
 project-list {
