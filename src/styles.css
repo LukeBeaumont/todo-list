@@ -33,6 +33,15 @@ body {
   min-height: 100vh;
 }
 
+.left-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-container {
+  display: flex;
+}
+
 h2 {
   padding: 0 0 0 25px;
   font-size: 1.5rem;
@@ -57,13 +66,12 @@ h2 {
   font-size: 2rem;
   border: none;
   border-radius: 50%;
-  align-self: flex-end;
+  align-self: center;
   cursor: pointer;
 }
 
 .add-todo-btn {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 project-list {
