@@ -1,4 +1,5 @@
 import { librarian } from "./librarian";
+import trash from "/icons/trash.svg";
 
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
@@ -16,9 +17,8 @@ export function renderProjects(projectArray) {
 function createProjectDeleteBtn(index) {
   const deleteBtn = document.createElement("img");
 
-  // deleteBtn.src = "/icons/trash.png";
+  deleteBtn.src = trash;
   deleteBtn.classList.add("project-delete");
-  deleteBtn.classList.add("close-btn");
   deleteBtn.addEventListener("click", (e) => {
     deleteProject(index);
     renderProjects(librarian.projectArray);
