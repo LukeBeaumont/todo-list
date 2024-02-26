@@ -14,9 +14,9 @@ export function renderProjects(projectArray) {
 }
 
 function createProjectDeleteBtn(index) {
-  const deleteBtn = document.createElement("div");
+  const deleteBtn = document.createElement("img");
 
-  deleteBtn.textContent = "x";
+  // deleteBtn.src = "/icons/trash.png";
   deleteBtn.classList.add("project-delete");
   deleteBtn.classList.add("close-btn");
   deleteBtn.addEventListener("click", (e) => {
