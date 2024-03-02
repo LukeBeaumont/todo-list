@@ -74,7 +74,6 @@ function createTodoDeleteBtn(index) {
 
   deleteBtn.textContent = "x";
   deleteBtn.classList.add("todo-delete");
-  deleteBtn.classList.add("close-btn");
   deleteBtn.addEventListener("click", () => {
     deleteTodo(index);
     renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
