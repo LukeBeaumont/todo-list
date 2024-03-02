@@ -97,13 +97,13 @@ li {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 20px;
   height: auto;
   width: 200px;
   padding: 10px;
-  border: 1px solid black;
+  border: none;
   border-radius: 5px;
-  background-color: #ddd;
+  background-color: #ffffff;
 }
 
 .todo-title {
