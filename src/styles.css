@@ -159,9 +159,10 @@ li {
 }
 
 #todo-close-btn {
-  position: relative;
-  top: -65px;
-  left: 273px;
+  background-image: url("/icons/close.svg");
+  height: 18px;
+  width: 18px;
+  align-self: flex-end;
 }
 
 .close-btn:hover {
