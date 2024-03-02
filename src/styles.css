@@ -156,6 +156,7 @@ li {
   height: 18px;
   width: 18px;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 #todo-close-btn {
@@ -163,6 +164,7 @@ li {
   height: 18px;
   width: 18px;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .close-btn:hover {
