@@ -49,62 +49,8 @@ export function handleTodoSubmit() {
   });
 }
 
-export function handleDropdown() {
-  const dropBtn = document.querySelector(".drop-btn");
-
-  dropBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    displayPickProjectList(librarian.projectArray);
-    displaySelectedProject();
-    toggleDropdown();
-    setSelectedProjectNumber();
-  });
-}
-
-function toggleDropdown() {
-  const myDropdown = document.getElementById("myDropdown");
-  myDropdown.classList.toggle("show-dropdown");
-}
-// the next two functions set the selected project name on the create todo form prior to submit/
-function inputProjectText(project) {
-  const projectName = document.querySelector(".which-project");
-  projectName.textContent = `Project: ${project}`;
-}
-
-function displaySelectedProject() {
-  let list = document.querySelectorAll("a");
-  list.forEach((item) =>
-    item.addEventListener("click", (e) => {
-      inputProjectText(e.target.textContent);
-      toggleDropdown();
-    })
-  );
-}
-
-function setSelectedProjectNumber() {
-  let list = document.querySelectorAll("a");
-  list.forEach((item) =>
-    item.addEventListener("click", (e) => {
-      librarian.projectNumber = e.target.id;
-      console.log(librarian.projectNumber);
-    })
-  );
-}
-
 function pushTodoToProject(toDo) {
   librarian.projectArray[librarian.projectNumber].toDos.push(toDo);
-}
-
-//creates project list element and adds to list
-function displayPickProjectList(mainArr) {
-  const dropdownContent = document.querySelector(".dropdown-content");
-  dropdownContent.replaceChildren(); // clears list before rendering
-  for (let i = 0; i < mainArr.length; i++) {
-    const listItem = document.createElement("a");
-    listItem.textContent = `${mainArr[i].title}`;
-    listItem.setAttribute("id", i);
-    dropdownContent.appendChild(listItem);
-  }
 }
 
 export function handleTodoCloseBtn() {
@@ -124,6 +70,7 @@ function clearTodoForm() {
 }
 
 export function showAddTodo() {
+  //change what this is attached too
   const addTodoBtn = document.querySelector(".add-todo-btn");
   const addTodo = document.querySelector(".add-todo");
 
