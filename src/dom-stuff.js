@@ -1,5 +1,6 @@
 import { librarian } from "./librarian";
 import trash from "/icons/trash.svg";
+import close from "/icons/trash-red.svg";
 
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
@@ -70,9 +71,9 @@ export function renderTodos(todoArray) {
 }
 
 function createTodoDeleteBtn(index) {
-  const deleteBtn = document.createElement("div");
+  const deleteBtn = document.createElement("img");
 
-  deleteBtn.textContent = "x";
+  deleteBtn.src = close;
   deleteBtn.classList.add("todo-delete");
   deleteBtn.addEventListener("click", () => {
     deleteTodo(index);
