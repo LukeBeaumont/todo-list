@@ -78,4 +78,5 @@ export function showAddTodo() {
   addTodoBtn.addEventListener("click", () => {
     addTodo.style.display = "flex";
   });
+  return addTodoBtn;
 }
