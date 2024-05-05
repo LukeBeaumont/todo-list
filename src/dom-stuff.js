@@ -1,6 +1,7 @@
 import { librarian } from "./librarian";
 import trash from "/icons/trash.svg";
 import close from "/icons/trash-red.svg";
+import { showAddTodo } from "./create-todo";
 
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
@@ -11,6 +12,7 @@ export function renderProjects(projectArray) {
     listItem.classList.add("project");
     listItem.setAttribute("id", i);
     projectList.appendChild(listItem);
+    listItem.appendChild(showAddTodo());
     listItem.appendChild(createProjectDeleteBtn(i));
   });
 }

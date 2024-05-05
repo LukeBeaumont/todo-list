@@ -17,8 +17,6 @@ import {
 })();
 
 (function HandleAddTodo() {
-  showAddTodo();
-  handleDropdown();
   handleTodoSubmit();
   handleTodoCloseBtn();
 })();
