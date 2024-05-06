@@ -69,14 +69,21 @@ function clearTodoForm() {
   //reset radio button here!
 }
 
-export function showAddTodo() {
+export function showAddTodo(i) {
   //change what this is attached too
   const addTodoBtn = document.createElement("button");
   addTodoBtn.classList.add("add-Todo-Btn");
+  addTodoBtn.setAttribute("id", i);
   const addTodo = document.querySelector(".add-todo");
 
-  addTodoBtn.addEventListener("click", () => {
+  addTodoBtn.addEventListener("click", (e) => {
     addTodo.style.display = "flex";
+    setProjectNumber(e);
+    console.log(librarian.projectNumber);
   });
   return addTodoBtn;
+}
+
+function setProjectNumber(e) {
+  librarian.projectNumber = e.target.id;
 }

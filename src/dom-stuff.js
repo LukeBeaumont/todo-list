@@ -14,7 +14,7 @@ export function renderProjects(projectArray) {
 
     const iconDiv = document.createElement("div");
     iconDiv.classList.add("icon-div");
-    iconDiv.appendChild(showAddTodo());
+    iconDiv.appendChild(showAddTodo(i));
     iconDiv.appendChild(createProjectDeleteBtn(i));
 
     listItem.appendChild(iconDiv);
@@ -113,8 +113,8 @@ export function addHighlightClickListeners() {
       clearHighlightedProject();
       librarian.projectNumber = e.target.id;
       if (!e.target.classList.contains("project-delete")) {
-        renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
-        highlightSelectedProject(librarian.projectNumber);
+        // renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
+        // highlightSelectedProject(librarian.projectNumber);
       }
     })
   );
