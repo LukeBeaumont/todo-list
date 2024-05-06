@@ -11,9 +11,15 @@ export function renderProjects(projectArray) {
     listItem.textContent = project.title;
     listItem.classList.add("project");
     listItem.setAttribute("id", i);
+
+    const iconDiv = document.createElement("div");
+    iconDiv.classList.add("icon-div");
+    iconDiv.appendChild(showAddTodo());
+    iconDiv.appendChild(createProjectDeleteBtn(i));
+
+    listItem.appendChild(iconDiv);
+
     projectList.appendChild(listItem);
-    listItem.appendChild(showAddTodo());
-    listItem.appendChild(createProjectDeleteBtn(i));
   });
 }
 
