@@ -72,7 +72,7 @@ function clearTodoForm() {
 export function showAddTodo() {
   //change what this is attached too
   const addTodoBtn = document.createElement("button");
-  addTodoBtn.classList.add("addTodoBtn");
+  addTodoBtn.classList.add("add-Todo-Btn");
   const addTodo = document.querySelector(".add-todo");
 
   addTodoBtn.addEventListener("click", () => {

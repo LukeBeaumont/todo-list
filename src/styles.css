@@ -138,6 +138,15 @@ li {
   display: none;
 }
 
+.add-Todo-Btn {
+  background-image: url("/icons/add.svg");
+  background-color: rgb(127, 102, 185);
+  height: 20px;
+  width: 20px;
+  border: none;
+  cursor: pointer;
+}
+
 .form {
   display: flex;
   flex-direction: column;
