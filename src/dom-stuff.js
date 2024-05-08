@@ -3,6 +3,15 @@ import trash from "/icons/trash.svg";
 import close from "/icons/trash-red.svg";
 import { showAddTodo } from "./create-todo";
 
+function handleProjectDeleteButton(index) {
+  deleteProject(index);
+  librarian.projectNumber = "0";
+  renderProjects(librarian.projectArray);
+
+  console.log(`project number is set to ${librarian.projectNumber}`);
+  highlightSelectedProject(librarian.projectNumber);
+}
+
 export function renderProjects(projectArray) {
   const projectList = document.querySelector(".project-list");
   projectList.replaceChildren();
@@ -21,23 +30,17 @@ export function renderProjects(projectArray) {
 
     projectList.appendChild(listItem);
   });
-}
 
-function createProjectDeleteBtn(index) {
-  const deleteBtn = document.createElement("img");
+  function createProjectDeleteBtn() {
+    const deleteBtn = document.createElement("img");
 
-  deleteBtn.src = trash;
-  deleteBtn.classList.add("project-delete");
-  deleteBtn.addEventListener("click", (e) => {
-    deleteProject(index);
-    renderProjects(librarian.projectArray);
-    if (!e.target.classList.contains("project-delete")) {
-      renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
-    }
-    clearTodos();
-    addHighlightClickListeners();
-  });
-  return deleteBtn;
+    deleteBtn.src = trash;
+    deleteBtn.classList.add("project-delete");
+    deleteBtn.addEventListener("click", (e) => {
+      handleProjectDeleteButton(e);
+    });
+    return deleteBtn;
+  }
 }
 
 function deleteProject(index) {
@@ -95,10 +98,8 @@ function deleteTodo(index) {
 }
 
 export function highlightSelectedProject(projectNum) {
-  if (projectNum >= 0) {
-    let projectsOnList = document.querySelectorAll(".project");
-    projectsOnList[projectNum].style.backgroundColor = " rgb(127, 102, 185)";
-  }
+  let projectsOnList = document.querySelectorAll(".project");
+  projectsOnList[projectNum].style.backgroundColor = "rgb(127, 102, 185)";
 }
 
 export function clearHighlightedProject() {
@@ -114,7 +115,7 @@ export function addHighlightClickListeners() {
       librarian.projectNumber = e.target.id;
       if (!e.target.classList.contains("project-delete")) {
         // renderTodos(librarian.projectArray[librarian.projectNumber].toDos);
-        // highlightSelectedProject(librarian.projectNumber);
+        highlightSelectedProject(librarian.projectNumber);
       }
     })
   );

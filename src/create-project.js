@@ -46,7 +46,7 @@ export function handleProjectSubmit() {
     highlightSelectedProject((librarian.projectArray.length - 1).toString());
     addHighlightClickListeners();
     console.log(librarian.projectArray);
-    console.log((librarian.projectArray.length - 1).toString());
+    console.log(librarian.projectNumber);
   });
 }
 
